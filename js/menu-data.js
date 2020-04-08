@@ -119,16 +119,18 @@ np.menuData = [
         title: '使用 Bing 搜索...',
         shortcut: 'Ctrl+E',
         enabled: true,
-        handler: function() { $editor.bingSearch(); }
+        handler: function() { 
+          //$editor.bingSearch(); 
+        }
       },
       {
         title: '查找(F)...',
         shortcut: 'Ctrl+F',
         enabled: false,
         handler: function() {
-          $dlgSearch.show(function(srch) {
+         /* $dlgSearch.show(function(srch) {
             $editor.search(srch);
-          });
+          });*/
         }
       },
       {
@@ -142,7 +144,7 @@ np.menuData = [
         shortcut: 'Ctrl+H',
         enabled: true,
         handler: function() {
-          $dlgReplace.show({
+          /*$dlgReplace.show({
             searchHandler: function(e) {
               $editor.search(e);
             },
@@ -152,7 +154,7 @@ np.menuData = [
             replaceAllHandler: function(e) {
               $editor.replaceAll(e);
             }
-          });
+          });*/
         }
       },
       {
@@ -160,13 +162,13 @@ np.menuData = [
         shortcut: 'Ctrl+G',
         enabled: true,
         handler: function() {
-          $dlgGoto.show({
+          /*$dlgGoto.show({
             lineNum: $editor.getRow(),
             totalLine: $editor.getTotalLn(),
             gotoHandler: function(lineNum) {
               $editor.gotoLn(lineNum);
             }
-          });
+          });*/
         }
       },
       {
@@ -179,13 +181,17 @@ np.menuData = [
         title: '全选(A)',
         shortcut: 'Ctrl+A',
         enabled: true,
-        handler: function() { $editor.selectAll(); }
+        handler: function() { 
+          //$editor.selectAll(); 
+        }
       },
       {
         title: '时间/日期(D)',
         shortcut: 'F5',
         enabled: true,
-        handler: function() { $editor.insertDataTime(); }
+        handler: function() { 
+          //$editor.insertDataTime(); 
+        }
       },
     ],
     width: '218px',
@@ -199,7 +205,7 @@ np.menuData = [
         shortcut: '',
         enabled: true,
         handler: function() {
-          np.bWrap = !np.bWrap;
+          /*np.bWrap = !np.bWrap;
 
           if(np.bWrap) {
             $statusBar.display(false);
@@ -215,7 +221,7 @@ np.menuData = [
           }
 
           $menubar.checked(2, 0, np.bWrap);
-          $editor.setWrap(np.bWrap);
+          $editor.setWrap(np.bWrap);*/
         }
       },
       {
@@ -243,10 +249,10 @@ np.menuData = [
         shortcut: '',
         enabled: true,
         handler: function() {
-          np.bShowStatusBar = !np.bShowStatusBar;
+          /*np.bShowStatusBar = !np.bShowStatusBar;
           $statusBar.display(np.bShowStatusBar);
           $menubar.checked(3, 0, np.bShowStatusBar);
-          $editor.resize(np.bShowStatusBar);
+          $editor.resize(np.bShowStatusBar);*/
         }
       }
     ],
@@ -261,7 +267,7 @@ np.menuData = [
         shortcut: '',
         enabled: true,
         handler: function() {
-          window.open('https://cn.bing.com/search?q=获取有关+windows+10+中的记事本的帮助', '_blank');
+         // window.open('https://cn.bing.com/search?q=获取有关+windows+10+中的记事本的帮助', '_blank');
         }
       },
       {

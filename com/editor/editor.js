@@ -7,13 +7,13 @@ var $editor = (function() {
 
   var $textArea = $DOM.find('textarea');
 
-  var cfg = {
+  /*var cfg = {
     posHandler: null,
     contentHandler: null,
     wrap: false
   };
 
-  var bSelect = false;
+  var bSelect = false;*/
 
   function resize(isBig) {
     if(isBig) {
@@ -23,7 +23,7 @@ var $editor = (function() {
     }
   }
 
-  function focus() {
+  /*function focus() {
     $textArea.focus();
   }
 
@@ -72,7 +72,7 @@ var $editor = (function() {
       $textArea.attr('wrap', 'off');
       $textArea.css({'overflow-x': 'scroll'});
     }
-  }
+  }*/
 
   function setFont(e) {
     $textArea.css({'font-family': e.family, 'font-size': e.size + 'pt'});
@@ -93,7 +93,7 @@ var $editor = (function() {
     }
   }
 
-  function selectAll() {
+  /*function selectAll() {
     var n = $textArea.val().length;
 
     $textArea[0].selectionStart = 0;
@@ -170,29 +170,29 @@ var $editor = (function() {
     $textArea[0].selectionEnd = result + srchCtnt.length;
 
     cfg.posHandler(getRow(), getCol());
-  }
+  }*/
 
   function show(conf) {
-    $.extend(cfg, conf);
+    //$.extend(cfg, conf);
 
     $('body').append($DOM);
     $textArea.trigger('focus');
-    setWrap(cfg.wrap);
+    //setWrap(cfg.wrap);
   }
 
   return {
     show: show,
     resize: resize,
-    focus: focus,
-    getTotalLn: getTotalLn,
-    getRow: getRow,
-    getCol: getCol,
-    setWrap: setWrap,
-    selectAll: selectAll,
-    insertDataTime: insertDataTime,
-    gotoLn: gotoLn,
-    bingSearch: bingSearch,
-    search: search,
+    //focus: focus,
+    //getTotalLn: getTotalLn,
+    //getRow: getRow,
+    //getCol: getCol,
+    //setWrap: setWrap,
+    //selectAll: selectAll,
+    //insertDataTime: insertDataTime,
+    //gotoLn: gotoLn,
+    //bingSearch: bingSearch,
+    //search: search,
     setFont: setFont
   };
 }());

@@ -26,20 +26,21 @@ np.fontHandler = function(e) {
 /* global $menubar $editor $statusBar: true */
 $(function() {
   $menubar.show(np.menuData);
-  $editor.show({
+  $editor.show();
+  /*$editor.show({
     posHandler: function(row, col) {
       $statusBar.setRowCol(row, col);
     },
     contentHandler: function(isEmpty) {
       $menubar.enabled(1, 6, isEmpty);
     }
-  });
+  });*/
   $editor.setFont({
     family: np.fontFamily,
     style: np.fontStype,
     size: np.fontSize
   });
-  $statusBar.init();
+  /*$statusBar.init();
   $statusBar.display(false);
 
   var $app = $('body');
@@ -47,5 +48,5 @@ $(function() {
   $app.click(function() {
     $menubar.hideMenu();
     $editor.focus();
-  });
+  });*/
 });
